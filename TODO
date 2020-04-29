@@ -1,7 +1,11 @@
 TODO
 ====
-1. Podobne jako jine Plack::App::Directory::* bere adresar a zpracovava to.
-2.
+2. Redirect from index/index.html to index.pyx
+3. Redirect from root
+4. Dirindex
+5.
 
 Applied
 =======
+1. Podobne jako jine Plack::App::Directory::* bere adresar a zpracovava to.
+OK [20200429] skim
