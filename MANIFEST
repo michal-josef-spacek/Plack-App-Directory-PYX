@@ -17,6 +17,7 @@ MANIFEST			This list of files
 META.yml
 PYX.pm
 README
+SIGNATURE
 t/data/root/ex1.pyx
 t/data/root/ex2.pyx
 t/Plack-App-Directory-PYX/01-use.t
