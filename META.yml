@@ -20,6 +20,7 @@ meta-spec:
 name: Plack-App-Directory-PYX
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt

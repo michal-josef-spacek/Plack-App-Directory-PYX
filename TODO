@@ -3,7 +3,6 @@ TODO
 2. Redirect from index/index.html to index.pyx
 3. Redirect from root
 4. Dirindex
-5. Doc
 6. Add indent version.
 7.
 
@@ -11,3 +10,6 @@ Applied
 =======
 1. Podobne jako jine Plack::App::Directory::* bere adresar a zpracovava to.
 OK [20200429] skim
+
+5. Doc
+OK [20200430] skim
