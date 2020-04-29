@@ -74,7 +74,7 @@ Returns instance of object.
 
 Creates Plack application.
 
-Return Plack::Component object.
+Returns Plack::Component object.
 
 =head1 EXAMPLE
 

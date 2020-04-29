@@ -20,7 +20,7 @@ METHODS
 
     Creates Plack application.
 
-    Return Plack::Component object.
+    Returns Plack::Component object.
 
 EXAMPLE
      use strict;
