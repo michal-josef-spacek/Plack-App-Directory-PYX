@@ -56,6 +56,7 @@ Plack::App::Directory::PYX - Plack PYX directory application.
  use Plack::App::Directory::PYX;
 
  my $obj = Plack::App::File->new(%parameters);
+ my $psgi_ar = $obj->serve_path($env, $path_to_file_or_dir);
  my $app = $obj->to_app;
 
 =head1 METHODS
@@ -67,6 +68,14 @@ Plack::App::Directory::PYX - Plack PYX directory application.
 Constructor.
 
 Returns instance of object.
+
+=head2 C<serve_path>
+
+ my $psgi_ar = $obj->serve_path($env, $path_to_file_or_dir);
+
+Process file or directory on disk and serve it to application.
+
+Returns reference to array (PSGI structure).
 
 =head2 C<to_app>
 
