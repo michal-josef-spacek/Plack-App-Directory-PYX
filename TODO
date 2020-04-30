@@ -4,7 +4,9 @@ TODO
 3. Redirect from root
 4. Dirindex (actually returns 'DIR' string).
 6. Add indent version.
-7.
+7. Is it possible to do something like this demo:
+plackup -MPlack::App::GraphEasy -e 'Plack::App::GraphEasy->new->to_app'
+8.
 
 Applied
 =======
