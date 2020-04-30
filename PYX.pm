@@ -5,6 +5,8 @@ use strict;
 use warnings;
 
 use PYX::SGML::Tags;
+use Plack::Util::Accessor qw(indent);
+use Tags::Output::Indent;
 use Tags::Output::Raw;
 use Unicode::UTF8 qw(encode_utf8);
 
@@ -23,7 +25,12 @@ sub serve_path {
 		];
 	}
 
-	my $tags = Tags::Output::Raw->new;
+	my $tags;
+	if ($self->indent) {
+		$tags = Tags::Output::Indent->new;
+	} else {
+		$tags = Tags::Output::Raw->new;
+	}
 	my $pyx = PYX::SGML::Tags->new(
 		'tags' => $tags,
 	);
@@ -69,6 +76,14 @@ Constructor.
 
 Returns instance of object.
 
+=over
+
+=item * C<indent>
+
+Set indent of SGML output.
+
+=back
+
 =head2 C<serve_path>
 
  my $psgi_ar = $obj->serve_path($env, $path_to_file_or_dir);
@@ -85,7 +100,7 @@ Creates Plack application.
 
 Returns Plack::Component object.
 
-=head1 EXAMPLE
+=head1 EXAMPLE1
 
  use strict;
  use warnings;
@@ -124,6 +139,60 @@ Returns Plack::Component object.
 
  # > curl http://localhost:5000/
  # <html><head><title>Title</title></head><body><div>Hello world</div></body></html>
+
+=head1 EXAMPLE2
+
+ use strict;
+ use warnings;
+
+ use File::Temp;
+ use IO::Barf;
+ use Plack::App::Directory::PYX;
+ use Plack::Runner;
+
+ # Temporary file with PYX.
+ my $temp_pyx_file = File::Temp->new->filename;
+
+ # PYX file.
+ my $pyx = <<'END';
+ (html
+ (head
+ (title
+ -Title
+ )title
+ )head
+ (body
+ (div
+ -Hello world
+ )div
+ )body
+ )html
+ END
+ barf($temp_pyx_file, $pyx);
+
+ # Run application with one PYX file.
+ my $app = Plack::App::Directory::PYX->new(
+         'file' => $temp_pyx_file,
+         'indent' => 1,
+ )->to_app;
+ Plack::Runner->new->run($app);
+
+ # Output:
+ # HTTP::Server::PSGI: Accepting connections at http://0:5000/
+
+ # > curl http://localhost:5000/
+ # <html>
+ #   <head>
+ #     <title>
+ #       Title
+ #     </title>
+ #   </head>
+ #   <body>
+ #     <div>
+ #       Hello world
+ #     </div>
+ #   </body>
+ # </html>
 
 =head1 DEPENDENCIES
 

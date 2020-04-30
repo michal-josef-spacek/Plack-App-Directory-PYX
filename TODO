@@ -3,7 +3,6 @@ TODO
 2. Redirect from index/index.html to index.pyx
 3. Redirect from root
 4. Dirindex (actually returns 'DIR' string).
-6. Add indent version.
 7. Is it possible to do something like this demo:
 plackup -MPlack::App::GraphEasy -e 'Plack::App::GraphEasy->new->to_app'
 8.
@@ -14,4 +13,7 @@ Applied
 OK [20200429] skim
 
 5. Doc
+OK [20200430] skim
+
+6. Add indent version.
 OK [20200430] skim

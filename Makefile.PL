@@ -20,6 +20,7 @@ readme_from 'PYX.pm';
 recursive_author_tests('xt');
 requires 'Plack::App::Directory' => 0;
 requires 'PYX::SGML::Tags' => 0;
+requires 'Tags::Output::Indent' => 0;
 requires 'Tags::Output::Raw' => 0;
 requires 'Unicode::UTF8' => 0;
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
