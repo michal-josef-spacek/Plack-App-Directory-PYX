@@ -4,7 +4,7 @@ use warnings;
 use File::Object;
 use Plack::App::Directory::PYX;
 use Plack::Test;
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 
 # Directories.
@@ -23,3 +23,7 @@ $res = $test->request(HTTP::Request->new(GET => '/ex2.pyx'));
 is($res->content,
 	'<html><head><title>title</title></head><body><div>Example #2</div></body></html>',
 	'Get content of ex2.pyx page.');
+
+# Test.
+$res = $test->request(HTTP::Request->new(GET => '/'));
+is($res->content, 'DIR', 'Get content of directory index.');
