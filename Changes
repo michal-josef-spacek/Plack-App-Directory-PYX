@@ -1,4 +1,6 @@
 0.03
+ - Rewrite API of indent() method to consume name of Tags::Output
+   serialization class.
 
 0.02 2020-04-30T20:44:41+02:00
  - Add indent constructor parameter and implementation.

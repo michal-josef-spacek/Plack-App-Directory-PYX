@@ -3,9 +3,11 @@ abstract: 'Plack PYX directory application.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
+  Error::Pure: 0
   ExtUtils::MakeMaker: 6.59
   File::Object: 0
   Plack::Test: 0
+  Tags::Output::Indent: 0
   Test::More: 0
   Test::NoWarnings: 0
 configure_requires:
@@ -25,8 +27,11 @@ no_index:
     - t
     - xt
 requires:
+  English: 0
+  Error::Pure: 0
   PYX::SGML::Tags: 0
   Plack::App::Directory: 0
+  Plack::Util::Accessor: 0
   Tags::Output::Raw: 0
   Unicode::UTF8: 0
   perl: 5.8.0
