@@ -6,6 +6,7 @@ build_requires:
   Error::Pure: 0
   ExtUtils::MakeMaker: 6.59
   File::Object: 0
+  HTTP::Request: 0
   Plack::Test: 0
   Tags::Output::Indent: 0
   Test::More: 0

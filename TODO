@@ -5,7 +5,8 @@ TODO
 4. Dirindex (actually returns 'DIR' string).
 7. Is it possible to do something like this demo:
 plackup -MPlack::App::GraphEasy -e 'Plack::App::GraphEasy->new->to_app'
-9.
+9. Odstranit hack s #132460
+10.
 
 Applied
 =======

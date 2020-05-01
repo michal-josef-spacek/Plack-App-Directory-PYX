@@ -1,4 +1,6 @@
 0.03
+ - Fix (hack) difference between XS and PP versions in Cookie::Baker and
+   WWW::Form::UrlEncoded::XS (RT#132460).
  - Fix test dependencies.
  - Rewrite API of indent() method to consume name of Tags::Output
    serialization class.
