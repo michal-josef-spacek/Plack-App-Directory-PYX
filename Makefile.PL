@@ -31,6 +31,7 @@ resources 'homepage' => 'https://github.com/michal-josef-spacek/Plack-App-Direct
 resources 'repository' => 'git://github.com/michal-josef-spacek/Plack-App-Directory-PYX';
 test_requires 'Error::Pure' => 0;
 test_requires 'File::Object' => 0;
+test_requires 'HTTP::Request' => 0;
 test_requires 'Plack::Test' => 0;
 test_requires 'Tags::Output::Indent' => 0;
 test_requires 'Test::More' => 0;

@@ -1,4 +1,5 @@
 0.03
+ - Fix test dependencies.
  - Rewrite API of indent() method to consume name of Tags::Output
    serialization class.
 

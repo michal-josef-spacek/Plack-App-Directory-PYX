@@ -3,6 +3,7 @@ use warnings;
 
 use Error::Pure;
 use File::Object;
+use HTTP::Request;
 use Plack::App::Directory::PYX;
 use Plack::Test;
 use Test::More 'tests' => 9;
