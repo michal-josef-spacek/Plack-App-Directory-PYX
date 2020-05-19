@@ -84,7 +84,7 @@ Plack::App::Directory::PYX - Plack PYX directory application.
 
  use Plack::App::Directory::PYX;
 
- my $obj = Plack::App::File->new(%parameters);
+ my $obj = Plack::App::Directory::PYX->new(%parameters);
  my $psgi_ar = $obj->serve_path($env, $path_to_file_or_dir);
  my $app = $obj->to_app;
 
@@ -92,7 +92,7 @@ Plack::App::Directory::PYX - Plack PYX directory application.
 
 =head2 C<new>
 
- my $obj = Plack::App::File->new(%parameters);
+ my $obj = Plack::App::Directory::PYX->new(%parameters);
 
 Constructor.
 
