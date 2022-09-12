@@ -126,6 +126,8 @@ Returns Plack::Component object.
 
 =head1 EXAMPLE1
 
+=for comment filename=pyx_minimal_psgi.pl
+
  use strict;
  use warnings;
 
@@ -165,6 +167,8 @@ Returns Plack::Component object.
  # <html><head><title>Title</title></head><body><div>Hello world</div></body></html>
 
 =head1 EXAMPLE2
+
+=for comment filename=pyx_indent_psgi.pl
 
  use strict;
  use warnings;
