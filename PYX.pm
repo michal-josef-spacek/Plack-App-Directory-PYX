@@ -11,7 +11,7 @@ use Plack::Util::Accessor qw(indent);
 use Tags::Output::Raw;
 use Unicode::UTF8 qw(encode_utf8);
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 sub serve_path {
 	my ($self, $env, $path_to_file_or_dir) = @_;
@@ -250,6 +250,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.05
+0.06
 
 =cut
